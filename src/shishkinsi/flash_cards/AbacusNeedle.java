@@ -1,5 +1,6 @@
 package shishkinsi.flash_cards;
 
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
@@ -35,8 +36,20 @@ public class AbacusNeedle extends JPanel {
 	}
 
 	private void drawCrossbar(Graphics2D g2) {
-		// TODO Auto-generated method stub
+		var height = getHeight();
+		int width = getWidth();
+		var boneSpaceHeight = height - CROSSBAR_THICKNESS;
+		var boneHeight = boneSpaceHeight/(5+2);
 		
+		var x = 1;
+		var y = 2 * boneHeight + 1;
+		var crossbar = new Rectangle(x, y, width - 1, CROSSBAR_THICKNESS);
+		
+//		g2.setPaint(Color.BLACK);
+		g2.draw(crossbar);
+//		int height = getHeight();
+//		g2.draw(new Rectangle(5, 5, width-10, height-10));
+
 	}
 
 	private void drawNeedle(Graphics2D g2) {

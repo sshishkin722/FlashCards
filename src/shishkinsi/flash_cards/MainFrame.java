@@ -20,7 +20,7 @@ public class MainFrame extends JFrame {
 		var contentPane = frame.getContentPane();
 		contentPane.setLayout(new BorderLayout());
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		contentPane.add(Abacus.createAbacus(3, 3));
+		contentPane.add(Abacus.createAbacus(3, 3), BorderLayout.CENTER);
 		
 		//TODO create real info pane
 		var infoPane = new Button("Info Pannel placeholder");
